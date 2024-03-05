@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h1>Projet casse-briques en Java</h1>
+            <p>Ce projet a été produit durant ma premère année de licence mathématiques-informatiques dans le cadre d'un projet de fin de semestre.</p>
+            <img src="/image/casseBrique0.png" alt="">
+            <p>Ce projet est codé en Java sous l'IDE processing il consiste en un jeu de casse-briques en 2D avec une raquette pilotable avec la souris est une balle qui rebondit sur la raquette et détruit une brique si il la touche</p>
+            <p>Le but est de détruire toutes les briques en les touchants avec la balle</p>
+            <img src="/image/deplaceBalle.png" alt="" width="200px" height="200px">
+            <p>La belle se depace graçe à l'appel de cette fonction dans la fonction miseAJourBalle</p>
+            <img src="/image/menupause.png" alt="" width="200px" height="200px">
+            <p>J'ai implémenté un menu pause</p>
+            <img src="/image/boss.png" alt="" width="200px" height="200px">
+            <p>Lorsque toute les briques sont détruites nous devons touchés 10 fois la cage du boss afin de le délivrer ensuite la partie est terminée</p>
+            <img src="/image/gameoverarka.png" alt="" width="200px" height="200px">
+            <p>Si la balle tombe 3 fois on perd la partie est un ecran game over s'affiche</p>
+            
+
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>

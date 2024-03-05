@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h5>Logiciel de gestion de caisse en java avec javafx</h5>
+            <p>Ce projet m'a été confié durant mon stage au sein de l'entrprise 123Cash situé à Corbeil-Esonnes</p>
+            <p>Tout d'abord une page de connexion apparait lors du lancement du logiciel</p>
+            <img src="/image/acceuilsofty.png" alt="" width="200px" height="200px">
+            <p>Sur cette page d'acceuil nous avons différents champs à saisir comme le magasin (3 disponibles)</p>
+            <p>Le jour, le type de caisse et le moment de saisie (matin ou soir)</p>
+            <p>Une fois que tout est renseigné on peut cliquer sur acceder ce qui va nous afficher cette page</p>
+            <img src="/image/caissematin1.png" alt="" width="200px" height="200px">
+            <p>Dans cette page nous apercevons tout ce qui concerne la caisse donc le nombre de pieces ou de rouleaux de pieces que la caisse comporte</p>
+            <p>En haut on voit les caracteristiques de la caisse avec en plus un indicateur d'ecart entre la derniere caisse du soir et du meme type et du meme magasin saisie la veille</p>
+            <p>Lorsque l'on quitte la saisie de la caisse sans sauvegarder un message apparait</p>
+            <img src="/image/caissematin4.png" alt="" width="200px" height="200px">
+            <p>Si l'on clique sur l'icone de sauvegarde on que l'on clique sur CTRL+S la sauvegarde s'effectue avec un message de confirmation</p>
+            <img src="/image/caissematin3.png" alt="" width="200px" height="200px">
+            <p>Une fois avoir saisie toutes les caisses du jours nous pouvons acceder aux recapitulatifs de fin de journée ce recapitulatifs résume les erreurs et les chiffres effectués dans la journées</p>
+            <p>Cet aspect est divisé en deux fenetres distinctes</p>
+            <img src="/image/recap1.png" alt="" width="200px" height="200px">
+            <p>La deuxieme fenetre</p>
+            <img src="/image/recap2.png" alt="" width="200px" height="200px">
+            <p>Une partie de gestions des utilisateurs est aussi disponible en cliquant sur l'icone utilisateurs dans le menu</p>
+            <p>On peut rechercher les users, les supprimers, les modifiers et en créer de nouveaux</p>
+            <img src="/image/usersofty.png" alt="" width="200px" height="200px">
+            <p>Recherche</p>
+            <img src="/image/usersofty2.png" alt="" width="200px" height="200px">
+            <p>Création</p>
+            <img src="/image/usersofity3.png" alt="" width="200px" height="200px">
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>

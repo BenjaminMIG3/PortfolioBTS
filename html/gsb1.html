@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h5>GSB AppliFrais Php-PDO: Conception et Développement d'une Application Web de Gestion des Frais Médicaux</h5>
+
+            <h5>Introduction:</h5>
+            <p>Le projet GSB AppliFrais Php-PDO a été réalisé dans le cadre de l'épreuve E5 - Conception et développement d'applications (option SLAM) du BTS Services Informatiques aux Organisations, lors de la session 2023. L'objectif principal était d'améliorer et finaliser une application web de gestion des frais pour le laboratoire Galaxy-Swiss-Bourdin (GSB), spécifiquement dédiée à ses visiteurs médicaux.</p>
+
+            <img src="/image/connexiongsb1.png" alt="" width="200px" height="200px">
+
+            <h5>Contexte:</h5>
+            <p>Le laboratoire GSB avait déjà mis en exploitation une application permettant aux visiteurs médicaux de consulter leurs notes de frais mensuelles et de saisir les frais du mois en cours. Cependant, des lacunes subsistaient, notamment l'absence de la partie comptable et des erreurs dans le code. La mission consistait à compléter la partie visiteur, créer la partie comptable, corriger les erreurs, et sécuriser l'ensemble du code.</p>
+
+            <h5>Langages et Outils Utilisés:</h5>
+            <p> 
+                - PHP (orienté objet, modèle MVC)
+                - HTML
+                - CSS
+                - SQL
+                - Gantt Project (planification du projet)
+                - Visual Studio Code (IDE de développement)
+                - PHPmyAdmin (gestion de base de données)
+                - Mamp/VM (connexion à la base de données)
+
+                <h5>Compétences Travaillées:</h5>
+                - Concevoir et développer une solution applicative
+                - Assurer la maintenance corrective ou évolutive d'une solution applicative
+                - Gérer les données
+
+                <img src="/image/consultationfichefrais.png" alt="" width="200px" height="200px">
+
+                <h5>Résultats Attendus et Productions Réalisées:</h5>
+                1. Maquette des écrans pour le rôle comptable
+                2. Schéma de données mis à jour
+                </p>
+                <img src="/image/saisiefichefrais.png" alt="" width="200px" height="200px">
+                <p>
+                <h5>Nouvelle version de l'application web</h5>
+                - Authentification et saisie des frais par le visiteur
+                - Consultation et validation des fiches de frais par le comptable
+                - Fonctionnalité permettant au visiteur d'imprimer ses fiches en PDF
+                <h5>4. Rapport de tests sur les nouvelles fonctionnalités</h5>
+                - Documentation technique intégrée
+                - Compte rendu du travail effectué
+
+                <h5>Contraintes et Méthodologie:</h5>
+                - Suivi du modèle MVC
+                - Sécurisation du code (requêtes préparées paramétrées, chiffrement des mots de passe)
+                - Réalisation de comptes rendus d'avancée du projet
+                - Création de tests et documentations
+
+                <h5>Bilan:</h5>
+                Le projet a réussi à achever la mise en place de la partie visiteur et à créer entièrement la partie comptable. Bien que tous les objectifs n'aient pas été atteints et que des tests n'aient pas été effectués, l'utilisation d'outils tels que Gantt et Trello a grandement facilité la gestion du projet. L'ensemble du code a été sécurisé, posant ainsi des bases solides pour des améliorations futures.
+
+                </p>
+                <img src="/image/validerfichefrais.png" alt="" width="200px" height="200px">
+                <p>
+
+                <h5>Améliorations Possibles:</h5>
+                1. Ajout de fonctionnalités pour améliorer l'expérience utilisateur.
+                2. Continuité de la maintenance corrective et évolutive de l'application.
+                3. Élargissement des tests pour garantir la robustesse de l'application.
+
+                <h5>Conclusion:</h5>
+                Le projet GSB AppliFrais Php-PDO a permis de répondre aux besoins du laboratoire GSB en matière de gestion des frais médicaux. Les compétences acquises et les bases posées ouvrent la voie à des améliorations continues pour une application toujours plus performante et adaptée aux besoins évolutifs de l'organisation.
+            </p>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>

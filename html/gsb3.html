@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h5>Application web de reservation de conférences en PHP avec le framework CodeIgniter4</h5>
+            <p>Ce projet est dans la continuité des projets GSB.</p>
+            <p>Lorsque l'on entre dans le site une page de connexion apparait</p>
+            <img src="/image/connexiongsb3.png" alt="" width="350px" height="200px">
+            <p>Une fois connecter une page d'acceuil se présente à nous avec une navbar</p>
+            <img src="/image/acceuilgsb3.png" alt="" width="350px" height="200px">
+            <p>Nous pouvons cliquer sur Consulter les conférences afin d'afficher les conférences stockées dans la BDD</p>
+            <img src="/image/conferencesgsb3.png" alt="" width="350px" height="200px">
+            <p>Afin de consulter les presentations de cette conférence nous pouvons cliquez sur le bouton + de la conférence de notre choix</p>
+            <p>Suite à cela une page avec les présentation de la conférence s'affiche</p>
+            <p>Si la date de la présentation est passée on ne peut pas reserver un siege sinon on clique a nouveau sur le bouton plus de notre choix</p>
+            <img src="/image/detailconferencesgsb3.png" alt="" width="350px" height="200px">
+            <p>Cela nous emmene sur la page de reservation d'un siège</p>
+            <img src="/image/reserversiegegsb3.png" alt="" width="350px" height="200px">
+            <p>Lorsque l'on clique sur un siège cela le reserve et le passe donc en rouge</p>
+            <img src="/image/reserversiege2gsb3.png" alt="" width="350px" height="200px">
+            <p>Si un siège est deja occupé il est grisé donc on ne peut pas le reserver</p>
+            <img src="/image/reserversiege3gsb3.png" alt="" width="350px" height="200px">
+            <p>Une fois avoir réserver un siège on apercois dans l'onglet mes reservations une ligne qui résume notre reservation</p>
+            <p>Si la date de la reservation est passée on peut la liker ou non</p>
+            <img src="/image/mesreservationsgsb3.png" alt="" width="350px" height="200px">
+            <p>SI l'on clique sur le bouton telecharger cela nous genere un pdf du ticket de reservation</p>
+            <img src="/image/ticketgsb3.png" alt="" width="350px" height="200px">
+            
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h1>Projet SUDOKU</h1>
+            <br>
+            <p>Ce projet fut demandé durant ma première année de licence mathématiques-informatiques. Le langage de programmation utilisé est le C avec la librairie ncurses pour l'affichage avec la console. Je n'ai malheuresement plus le code source.</p>
+            <br>
+            <div class="img"><img src="/image/sudokuValid.png"></div>
+            <br>
+            <p>Tout d'abord le sudoku est generé de manière récursive jusqu'a être valide (valide signifie qu'il est solvabe). De plus une version résolue de la grille est crée est stocker dans un tableau a deux dimensions de taille 9x9</p>
+            <br>
+            <div class="img"><img src="/image/sudoku0.png"></div>
+            <br>
+            <p>Afin de nous deplacer j'ai modelisé un curseur via des coordonnées coord[x][y] afin de parcourir la grille de sudoku qui est un tableau de 9x9,le deplacement se fait via les fleches directionnelles.</p>
+            <br>
+            <div class="img"><img src="/image/sudoku1.png"></div>
+            <br>
+            <p>Lorsque l'utilisateur se déplace sur une case qui était présente de base il ne peut pas la modifier est un message apparait disant "case initiale" et le curseur change de forme</p>
+            <br>
+            <div class="img"><img src="/image/sudoku2.png"></div>
+            <br>
+            <p>Si on appuie sur la touche h du clavier la case est résolue. C'est à dire que la case prend la valeur de la case de la grille résolue au préalable. Sinon on appuie sur la barre espace afin d'incrémenter la cellule de 1 à 9.</p>
+            <br>
+            <div class="img"><img src="/image/sudoku3.png"></div>
+            <br>
+            <p>Lors de l'incrémentation des celulles si la case que nous modifions pose problème il y aura un curseur qui va se positionner sur la/les cases qui posent problème et un message apparaitrat.</p>
+            <br>
+            <div class="img"><img src="/image/sudoku4.png"></div>
+            <br>
+            <p>Si l'on appuit sur la touche s la grille se résout et la partie est fini avec un message à la fin. Sinon on peut le terminer de la matière traditionnelle en faisant case par case.</p>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>

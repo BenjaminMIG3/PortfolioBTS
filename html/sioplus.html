@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Contact</title>
+</head>
+<body>
+
+    <header class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <h1>Benjamin DUSUNCELI</h1>
+        </div>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="container mt-4">
+        <div class="text-center">
+            <h5>SIO+ JAVA: Conception et Développement d'une Application java de Gestion de programmes et utilisateurs</h5>
+            <p>Tout d'abord une page de connexion se présente lors du lancement de l'application</p>
+            <img src="/image/sioPlus0.png" alt="" width="200px" height="200px">
+            <p>Si l'on ne détient pas de compte on peut créer un compte via un formulaire</p>
+            <img src="/image/inscriptionsioplus.png" alt="" width="200px" height="200px">
+            <p>Une fois connecté ont peut accéder et rechercher les utilisateurs recensés dans la base de données</p>
+            <img src="/image/acceuiladminsioplus.png" alt="" width="200px">
+            <p>Lorsque l'on clique sur un des utilisateurs ses logs de connexion apparaissent avec ses caracteristiques</p>
+            <img src="/image/acceuiladmin2sioplus.png" alt="" width="200px" height="200px">
+            <p>On a la possibilité de consulter les programmes présents dans la base de données avec pour chaque programme sa description</p>
+            <img src="/image/gererprogrammesioplus.png" alt="" width="200px" height="200px">
+            <p>Nous avons aussi la possibilité de créer des programmes via un formulaire</p>
+            <img src="/image/creerprogrammesioplus.png" alt="" width="200px" height="200px">
+            <p>Un programme a un genre que l'on peut aussi créer</p>
+            <img src="/image/creergenresioplus.png" alt="" width="200px" height="200px">
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Benjamin DUSUNCELI</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#navbar-container").load("/html/navbar.html");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="navbar-script.js"></script>
+</body>
+</html>
