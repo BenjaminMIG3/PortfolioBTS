@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>My Projects - Benjamin DUSUNCELI</title>
+  <meta name="description" content="Découvrez mes projets de développement logiciel, regroupés par langages de programmation : PHP, Java, C, et plus.">
+  <meta name="keywords" content="portfolio, projets, développement logiciel, PHP, Java, C, Python, Django">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <!-- Styles additionnels pour le portfolio -->
+  <style>
+    .portfolio-img-container {
+      height: 200px; /* Hauteur fixe pour toutes les divs d'images */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5; /* Couleur de fond si image plus petite */
+    }
+    
+    .portfolio-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Pour que l'image couvre toute la zone sans déformation */
+    }
+    
+    .portfolio-content {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+    
+    .portfolio-info {
+      padding: 15px;
+      background-color: #fff;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Personal
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Updated: Mar 05 2025 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <h1 class="sitename">Benjamin Dusunceli</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" >Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <!-- <li><a href="services.html">Services</a></li> -->
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Projets</h1>
+              <p class="mb-0">Découvrez mes projets de développement logiciel, regroupés par langages de programmation. Chaque projet illustre mes compétences dans des technologies variées, allant du développement web au développement d'applications desktop et au développement de jeux vidéos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="current">Projets</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Tous</li>
+            <li data-filter=".filter-python">Python</li>
+            <li data-filter=".filter-java">Java</li>
+            <li data-filter=".filter-c">C</li>
+            <li data-filter=".filter-cpp">C++</li>
+            <li data-filter=".filter-csharp">C#</li>
+            <li data-filter=".filter-php">PHP</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/tweet_engie0.png" class="img-fluid" alt="Projet InvestiTrack via Django">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet Tweet Engie & Model IA</h4>
+                  <p>Python Streamlit & IA</p>
+                  <a href="assets/img/tweet_engie0.png" title="Projet Tweet Engie" data-gallery="portfolio-gallery-python" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/softycaisse.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-python">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/investitrack0.png" class="img-fluid" alt="Projet InvestiTrack via Django">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet InvestiTrack</h4>
+                  <p>Python Django</p>
+                  <a href="assets/img/investitrack0.png" title="Projet InvestiTrack Django" data-gallery="portfolio-gallery-python" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/softycaisse.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Projets PHP -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-csharp">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/ahmazone0.png" class="img-fluid" alt="Projet C#">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet Àmazone</h4>
+                  <p>C# avec framework Avalonia et .NET</p>
+                  <a href="assets/img/ahmazone0.png" title="Projet GSB3" data-gallery="portfolio-gallery-php" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/gsb3.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Projets Java -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/hollyfork0.png" class="img-fluid" alt="Projet HollyFork Spring Boot">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet HollyFork</h4>
+                  <p>Java SpringBoot</p>
+                  <a href="assets/img/hollyfork0.png" title="Projet HollyFork" data-gallery="portfolio-gallery-java" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/softycaisse.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+              <!-- Projets CPP -->
+              <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-cpp">
+                <div class="portfolio-content h-100">
+                  <div class="portfolio-img-container">
+                    <img src="assets/img/pacman_cpp_0.png" class="img-fluid" alt="Projet PAC-MAN avec SDL2 en C++">
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Projet PAC-MAN</h4>
+                    <p>C++ SDL2</p>
+                    <a href="assets/img/pacman_cpp_0.png" title="Projet PAC-MAN" data-gallery="portfolio-gallery-cpp" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <a href="html/sudoku.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                  </div>
+                </div>
+              </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/acceuilsofty.png" class="img-fluid" alt="Projet SoftyCaisse en JavaFX">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet SoftyCaisse</h4>
+                  <p>JavaFX</p>
+                  <a href="assets/img/acceuilsofty.png" title="Projet SoftyCaisse" data-gallery="portfolio-gallery-java" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/softycaisse.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/gererprogrammesioplus.png" class="img-fluid" alt="Projet SIO+ en Java POO">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet SIO+</h4>
+                  <p>Java POO</p>
+                  <a href="assets/img/gererprogrammesioplus.png" title="Projet SIO+" data-gallery="portfolio-gallery-java" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/sioplus.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Projets PHP -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/acceuilgsb3.png" class="img-fluid" alt="Projet GSB3 en PHP">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet GSB3</h4>
+                  <p>PHP avec framework CodeIgniter4</p>
+                  <a href="assets/img/acceuilgsb3.png" title="Projet GSB3" data-gallery="portfolio-gallery-php" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/gsb3.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/acceuilconference.png" class="img-fluid" alt="Projet GSB2 en Java POO">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet GSB2</h4>
+                  <p>Java POO</p>
+                  <a href="assets/img/acceuilconference.png" title="Projet GSB2" data-gallery="portfolio-gallery-java" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/gsb2.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/consultationfichefrais.png" class="img-fluid" alt="Projet GSB1 en PHP">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet GSB1</h4>
+                  <p>PHP avec PDO</p>
+                  <a href="assets/img/consultationfichefrais.png" title="Projet GSB1" data-gallery="portfolio-gallery-php" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/gsb1.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-java">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/casseBrique0.png" class="img-fluid" alt="Projet Casse-briques en Java/Processing">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet Casse-briques</h4>
+                  <p>Java/Processing</p>
+                  <a href="assets/img/casseBrique0.png" title="Projet Casse-briques" data-gallery="portfolio-gallery-java" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/casseBrique.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Projets C -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-c">
+              <div class="portfolio-content h-100">
+                <div class="portfolio-img-container">
+                  <img src="assets/img/sudoku0.png" class="img-fluid" alt="Projet Sudoku en C">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Projet Sudoku</h4>
+                  <p>C</p>
+                  <a href="assets/img/sudoku0.png" title="Projet Sudoku" data-gallery="portfolio-gallery-c" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="html/sudoku.html" title="Plus de détails" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Benjamin DUSUNCELI CETIN</h3>
+      <p>Développeur logiciel passionné, spécialisé en Python, Java et C++. Actuellement en alternance et en poursuite d'études d'ingénieur.</p>
+      <div class="social-links d-flex justify-content-center">
+        <!-- <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a> -->
+        <a href="www.linkedin.com/in/benjamin-dusunceli-cetin" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/BenjaminMIG3" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Benjamin DUSUNCELI CETIN</strong> <span>2025</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Template par <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
