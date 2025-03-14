@@ -30,6 +30,10 @@ try {
     // Sujet avec valeur par défaut
     $mail->Subject = $_POST['subject'] ?: 'Nouveau message depuis le formulaire de contact';
 
+    // Évalue les valeurs ternaires avant d'insérer dans la chaîne
+    $subject_body = $_POST['subject'] ?: 'Aucun sujet';
+    $subject_alt = $_POST['subject'] ?: 'Aucun sujet';
+
     // Corps HTML amélioré
     $mail->isHTML(true);
     $mail->Body = "
@@ -90,11 +94,11 @@ try {
                 <div class='content'>
                     <p><strong>Nom :</strong> {$_POST['name']}</p>
                     <p><strong>Email :</strong> {$_POST['email']}</p>
-                    <p><strong>Sujet :</strong> {$_POST['subject'] ?: 'Aucun sujet'}</p>
+                    <p><strong>Sujet :</strong> $subject_body</p>
                     <p><strong>Message :</strong><br>{$_POST['message']}</p>
                 </div>
                 <div class='footer'>
-                    <p>Envoyé via le portfolio de Benjamin Dusunceli - {date('Y-m-d H:i:s')}</p>
+                    <p>Envoyé via le portfolio de Benjamin Dusunceli - " . date('Y-m-d H:i:s') . "</p>
                 </div>
             </div>
         </body>
@@ -105,7 +109,7 @@ try {
     $mail->AltBody = "Nouveau message reçu\n\n" .
                      "Nom: {$_POST['name']}\n" .
                      "Email: {$_POST['email']}\n" .
-                     "Sujet: {$_POST['subject'] ?: 'Aucun sujet'}\n" .
+                     "Sujet: $subject_alt\n" .
                      "Message: {$_POST['message']}\n\n" .
                      "Envoyé via le portfolio de Benjamin Dusunceli - " . date('Y-m-d H:i:s');
 
