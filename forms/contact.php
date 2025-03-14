@@ -16,6 +16,7 @@ $your_password = 'Azert.cici91';
 
 $mail = new PHPMailer(true);
 try {
+    // Configuration SMTP
     $mail->isSMTP();
     $mail->Host = 'smtp.ionos.fr';
     $mail->SMTPAuth = true;
@@ -23,7 +24,12 @@ try {
     $mail->Password = $your_password;
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
+    
+    // Configuration de l'encodage pour éviter les problèmes de caractères spéciaux
+    $mail->CharSet = 'UTF-8';
+    $mail->Encoding = 'base64';
 
+    // Expéditeur et destinataire
     $mail->setFrom($your_email, $_POST['name']);
     $mail->addAddress($receiving_email_address);
 
@@ -33,6 +39,12 @@ try {
     // Évalue les valeurs ternaires avant d'insérer dans la chaîne
     $subject_body = $_POST['subject'] ?: 'Aucun sujet';
     $subject_alt = $_POST['subject'] ?: 'Aucun sujet';
+    
+    // Préparation des données pour éviter les injections
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = nl2br(htmlspecialchars($_POST['message']));
+    $date = date('d/m/Y H:i');
 
     // Corps HTML amélioré
     $mail->isHTML(true);
@@ -43,46 +55,66 @@ try {
             <meta charset='UTF-8'>
             <style>
                 body {
-                    font-family: 'Arial', sans-serif;
-                    background-color: #1a1a1a;
-                    color: #ffffff;
+                    font-family: 'Helvetica', Arial, sans-serif;
+                    background-color: #f7f7f7;
+                    color: #333333;
                     margin: 0;
-                    padding: 20px;
+                    padding: 0;
+                    line-height: 1.6;
                 }
                 .container {
                     max-width: 600px;
-                    margin: 0 auto;
-                    background-color: #222222;
-                    padding: 20px;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                    margin: 20px auto;
+                    background-color: #ffffff;
+                    padding: 30px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                }
+                .logo {
+                    text-align: center;
+                    margin-bottom: 20px;
                 }
                 .header {
-                    text-align: center;
-                    padding-bottom: 20px;
                     border-bottom: 2px solid #28a745;
+                    padding-bottom: 15px;
+                    margin-bottom: 25px;
                 }
                 .header h2 {
                     color: #28a745;
                     margin: 0;
                     font-size: 24px;
+                    font-weight: 600;
                 }
                 .content {
-                    padding: 20px 0;
+                    padding: 0 10px;
                 }
-                .content p {
-                    margin: 10px 0;
+                .field {
+                    margin-bottom: 20px;
+                }
+                .field-label {
+                    display: block;
+                    font-weight: bold;
+                    color: #555555;
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                }
+                .field-value {
+                    background-color: #f9f9f9;
+                    padding: 12px;
+                    border-radius: 4px;
+                    border-left: 3px solid #28a745;
                     font-size: 16px;
                 }
-                .content strong {
-                    color: #28a745;
+                .message-field {
+                    line-height: 1.8;
                 }
                 .footer {
                     text-align: center;
-                    padding-top: 20px;
-                    border-top: 1px solid #444;
-                    color: #888;
-                    font-size: 12px;
+                    margin-top: 30px;
+                    padding-top: 15px;
+                    border-top: 1px solid #eeeeee;
+                    color: #888888;
+                    font-size: 13px;
                 }
             </style>
         </head>
@@ -92,13 +124,25 @@ try {
                     <h2>Nouveau message reçu</h2>
                 </div>
                 <div class='content'>
-                    <p><strong>Nom :</strong> {$_POST['name']}</p>
-                    <p><strong>Email :</strong> {$_POST['email']}</p>
-                    <p><strong>Sujet :</strong> $subject_body</p>
-                    <p><strong>Message :</strong><br>{$_POST['message']}</p>
+                    <div class='field'>
+                        <span class='field-label'>Nom</span>
+                        <div class='field-value'>$name</div>
+                    </div>
+                    <div class='field'>
+                        <span class='field-label'>Email</span>
+                        <div class='field-value'>$email</div>
+                    </div>
+                    <div class='field'>
+                        <span class='field-label'>Sujet</span>
+                        <div class='field-value'>$subject_body</div>
+                    </div>
+                    <div class='field'>
+                        <span class='field-label'>Message</span>
+                        <div class='field-value message-field'>$message</div>
+                    </div>
                 </div>
                 <div class='footer'>
-                    <p>Envoyé via le portfolio de Benjamin Dusunceli - " . date('Y-m-d H:i:s') . "</p>
+                    <p>Envoyé via le portfolio de Benjamin Dusunceli - $date</p>
                 </div>
             </div>
         </body>
@@ -107,11 +151,11 @@ try {
 
     // Version texte pour les clients non HTML
     $mail->AltBody = "Nouveau message reçu\n\n" .
-                     "Nom: {$_POST['name']}\n" .
-                     "Email: {$_POST['email']}\n" .
+                     "Nom: $name\n" .
+                     "Email: $email\n" .
                      "Sujet: $subject_alt\n" .
                      "Message: {$_POST['message']}\n\n" .
-                     "Envoyé via le portfolio de Benjamin Dusunceli - " . date('Y-m-d H:i:s');
+                     "Envoyé via le portfolio de Benjamin Dusunceli - $date";
 
     // Envoyer l'email
     $mail->send();
